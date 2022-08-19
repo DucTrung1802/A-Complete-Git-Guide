@@ -20,6 +20,20 @@ Git includes **06** components as the following figure:
 
 ![](Images/Git%20Components.png)
 
+<br>
+
+Explanation:
+- **`snapshot`**: Current state (including folders, files...) of the project at a specific point in time.
+
+<br>
+
+- **`remote branch`**: A series of **`snapshot`** on the server.
+- **`remote-tracking reference`**: A copy of **`remote branch`** on your local machine.
+- **`local branch`**: A series of **`snapshot`** on the local machine.
+- **`index / staging area`**: The preparation space for a new **` snapshot`**.
+- **`workspace`**: The current state of your project on local machine, may contains `committed files and uncommitted files` or `committed files` only.
+- **`stash`**: a temporary local **`snapshot`** of the **`workspace`**, used to save the current state of the **`workspace`** while you work on another branch.
+
 ## Reference
 - https://git-scm.com/docs
 - https://ndpsoftware.com/git-cheatsheet.html
