@@ -15,7 +15,9 @@ There are 2 types of **`Git repository / Git repo / repo`**:
 
 ## 3. Git components
 Git includes **06** components as the following figure:
+
 <br>
+
 ![](Images/Git%20Components.png)
 
 ## Reference
