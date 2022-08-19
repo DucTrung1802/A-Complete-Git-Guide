@@ -13,7 +13,9 @@ There are 2 types of **`Git repository / Git repo / repo`**:
 - **`Remote repository / Remote repo`**: A repository for sharing among many people and arranged on a server (Github, Gitlab, Bitbucket, Azure DevOps).
 - **`Local repository / Local repo`**: A repository arranged on a machine, for a single person to use.
 
-
+## 3. Git components
+Git includes **06** components as the following figure:
+![](Images/Git%20Components.png)
 
 ## Reference
 - https://git-scm.com/docs
