@@ -42,11 +42,47 @@ Explanation:
 
 ##### a) Function
 
+- Create an empty Git repository or reinitialize an existing one.
 
+##### b) Syntax
 
 ```
-
+git init [-q | --quiet] [--bare] [--template=<template-directory>]
+	  [--separate-git-dir <git-dir>] [--object-format=<format>]
+	  [-b <branch-name> | --initial-branch=<branch-name>]
+	  [--shared[=<permissions>]] [<directory>]
 ```
+
+##### c) Option
+
+[git init](https://git-scm.com/docs/git-init#_options)
+
+##### d) Useful full commands
+
+- Create a new folder for a new repo
+```
+mkdir new_repo
+cd new_repo
+```
+
+- Create a new bare repository (already in folder of repository)
+```
+git init --bare
+```
+
+- Create a new repository with initial commit (already in folder of repository) **(Recommend)**
+```
+git init
+echo # New Repo > README.md
+git add README.md
+git commit -m "Initial commit"
+```
+
+#### 4.1.2 git clone
+
+
+
+
 
 
 
