@@ -13,7 +13,7 @@ There are 2 types of **`Git repository / Git repo / repo`**:
 - **`Remote repository / Remote repo`**: A repository for sharing among many people and arranged on a server (Github, Gitlab, Bitbucket, Azure DevOps).
 - **`Local repository / Local repo`**: A repository arranged on a machine, for a single person to use.
 
-## 3. Git components
+## 3. Git Components
 Git includes **06** components as the following figure:
 
 <br>
@@ -33,6 +33,22 @@ Explanation:
 - **`index / staging area`**: The preparation space for a new **` snapshot`**.
 - **`workspace`**: The current state of your project on local machine, may contains `committed files and uncommitted files` or `committed files` only.
 - **`stash`**: a temporary local **`snapshot`** of the **`workspace`**, used to save the current state of the **`workspace`** while you work on another branch.
+
+## 4. Git Commands
+
+### 4.1 Getting and Creating Projects
+
+#### 4.1.1 git init
+
+##### a) Function
+
+
+
+```
+
+```
+
+
 
 ## Reference
 - https://git-scm.com/docs
