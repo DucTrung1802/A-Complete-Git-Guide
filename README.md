@@ -59,24 +59,37 @@ git init [-q | --quiet] [--bare] [--template=<template-directory>]
 
 ##### d) Useful full commands
 
+`<something_something>` is the content to be filled.
+
 - Create a new folder for a new repo
 ```
-mkdir new_repo
-cd new_repo
+mkdir <new_repo_name>
+cd <new_repo_name>
 ```
 
-- Create a new bare repository (already in folder of repository)
+- Create a new bare repository (`already in folder of repository`)
 ```
 git init --bare
 ```
 
-- Create a new repository with initial commit (already in folder of repository) **(Recommend)**
+- Create a new `local` repository with initial commit (`already in folder of repository`)
 ```
 git init
 echo # New Repo > README.md
 git add README.md
 git commit -m "Initial commit"
 ```
+
+- Create a new `local + remote` repository with initial commit (`already in folder of repository`, `already logged in Github`) **(Recommend)**
+```
+git init
+echo # New Repo > README.md
+git add README.md
+git commit -m "Initial commit"
+git push -u origin master
+```
+
+
 
 #### 4.1.2 git clone
 
