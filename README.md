@@ -57,36 +57,32 @@ git init [-q | --quiet] [--bare] [--template=<template-directory>]
 
 [git init](https://git-scm.com/docs/git-init#_options)
 
-##### d) Useful full commands
+##### d) Useful commands
 
-`<something_something>` is the content to be filled.
+`<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Create a new folder for a new repo
 ```
-mkdir <new_repo_name>
-cd <new_repo_name>
+mkdir <REPO_NAME>
+cd <REPO_NAME>
 ```
 
-- Create a new bare repository (`already in folder of repository`)
-```
-git init --bare
-```
+- Create a new `local + remote` repository with initial commit (`already in folder of repository`)
 
-- Create a new `local` repository with initial commit (`already in folder of repository`)
+**Make sure you already initialized a remote repo with name <REPO_NAME> on Github.**
+
 ```
 git init
 echo # New Repo > README.md
 git add README.md
 git commit -m "Initial commit"
+git branch -M main
 ```
-
-- Create a new `local + remote` repository with initial commit (`already in folder of repository`, `already logged in Github`) **(Recommend)**
 ```
-git init
-echo # New Repo > README.md
-git add README.md
-git commit -m "Initial commit"
-git push -u origin master
+git remote add origin https://github.com/<GIT_USERNAME>/<REPO_NAME>.git
+```
+```
+git push -u origin main
 ```
 
 
