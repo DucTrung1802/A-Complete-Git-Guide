@@ -185,6 +185,76 @@ git add .
 
 - **`git add`** does not add file described in **`.gitignore`** !
 
+#### 4.2.1 git add
+
+##### a) Function
+
+- Show the **`workspace`** status.
+
+##### b) Syntax
+
+```
+git status [<options>…​] [--] [<pathspec>…​]
+```
+
+##### c) Option
+
+[git status](https://git-scm.com/docs/git-status#_options)
+
+##### d) Useful commands
+
+- Show the **`workspace`** status
+```
+git status
+```
+
+- Show the **`workspace`** status in simple form
+```
+git status -s
+```
+
+- Short Format
+```
+[X][Y] PATH
+[X][Y] ORIG_PATH -> PATH
+```
+Explain:
+[X]: The status of the **`index`**.
+[Y]: The status of the **`workspace`**.
+
+Example:
+
+----------------
+
+```
+A  abcd.txt
+```
+&rarr; `abcd.txt` is added in **`index`** and unmodified in **`workspace`**.
+
+----------------
+
+```
+AD  abcd.txt
+```
+&rarr; `abcd.txt` is added in **`index`** and deleted in **`workspace`**.
+
+----------------
+
+- Table of [X] or [Y]
+
+| Arbitrary | Description |
+| :---: | ----------- |
+| " " | Unmodified |
+| M | modified |
+| T | File type changed |
+| A | Added |
+| D | Delete |
+| R | Renamed |
+| C | Copied |
+| U | Updated but unmerged |
+
+
+
 ## Reference
 - https://git-scm.com/docs
 - https://ndpsoftware.com/git-cheatsheet.html
