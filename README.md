@@ -133,7 +133,6 @@ git clone <USER>@<HOST>:<PATH_TO_REPO>.git
 git clone <URL_REPO>
 ```
 
-
 ## Reference
 - https://git-scm.com/docs
 - https://ndpsoftware.com/git-cheatsheet.html
