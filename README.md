@@ -85,6 +85,8 @@ git remote add origin https://github.com/<GIT_USERNAME>/<REPO_NAME>.git
 git push -u origin main
 ```
 
+---
+
 #### 4.1.2 git clone
 
 ##### a) Function
@@ -136,6 +138,8 @@ git clone <USER>@<HOST>:<PATH_TO_REPO>.git
 git clone <URL_REPO>
 ```
 
+---
+
 ### 4.2 Basic Snapshotting
 
 #### 4.2.1 git add
@@ -185,7 +189,9 @@ git add .
 
 - **`git add`** does not add file described in **`.gitignore`** !
 
-#### 4.2.1 git add
+---
+
+#### 4.2.2 git status
 
 ##### a) Function
 
@@ -223,22 +229,14 @@ Explain:
 [Y]: The status of the **`workspace`**.
 
 Example:
-
-----------------
-
 ```
 A  abcd.txt
 ```
 &rarr; `abcd.txt` is added in **`index`** and unmodified in **`workspace`**.
-
-----------------
-
 ```
 AD  abcd.txt
 ```
 &rarr; `abcd.txt` is added in **`index`** and deleted in **`workspace`**.
-
-----------------
 
 - Table of [X] or [Y]
 
@@ -253,6 +251,9 @@ AD  abcd.txt
 | C | Copied |
 | U | Updated but unmerged |
 
+---
+
+#### 4.2.3 git diff
 
 
 ## Reference
