@@ -181,8 +181,12 @@ git add -A
 git add .
 ```
 
+##### e) ATTENTION
+
+- **`git add`** does not add file described in **`.gitignore`** !
+
 ## Reference
 - https://git-scm.com/docs
 - https://ndpsoftware.com/git-cheatsheet.html
 - https://backlog.com/git-tutorial/vn/intro/intro1_2.html
-- 
+- https://ndpsoftware.com/git-cheatsheet.html#loc=index
