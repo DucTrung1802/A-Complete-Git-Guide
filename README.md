@@ -91,6 +91,9 @@ git push -u origin main
 
 - Clone a repository into a new directory.
 
+![](Images/git%20clone.png)
+
+
 ##### b) Syntax
 
 ```
@@ -132,6 +135,15 @@ git clone <USER>@<HOST>:<PATH_TO_REPO>.git
 ```
 git clone <URL_REPO>
 ```
+
+### 4.2 Basic Snapshotting
+
+#### 4.2.1 git add
+
+##### a) Function
+
+- Add file contents to the index
+
 
 ## Reference
 - https://git-scm.com/docs
