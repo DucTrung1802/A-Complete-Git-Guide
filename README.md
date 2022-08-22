@@ -197,6 +197,8 @@ git add .
 
 - Show the **`workspace`** status.
 
+![](Images/git%20status.png)
+
 ##### b) Syntax
 
 ```
