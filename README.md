@@ -85,14 +85,53 @@ git remote add origin https://github.com/<GIT_USERNAME>/<REPO_NAME>.git
 git push -u origin main
 ```
 
-
-
 #### 4.1.2 git clone
 
+##### a) Function
 
+- Clone a repository into a new directory.
 
+##### b) Syntax
 
+```
+git clone [--template=<template-directory>]
+	  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
+	  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]
+	  [--dissociate] [--separate-git-dir <git-dir>]
+	  [--depth <depth>] [--[no-]single-branch] [--no-tags]
+	  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]
+	  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]
+	  [--filter=<filter> [--also-filter-submodules]] [--] <repository>
+	  [<directory>]
+```
 
+##### c) Option
+
+[git clone](https://git-scm.com/docs/git-clone#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Copy a local repo to current folder.
+```
+git clone <LOCAL_REPO_PATH>
+```
+
+- Copy a local repo to a cetain folder.
+```
+git clone <LOCAL_REPO_PATH> <DESTINATION_FOLDER_PATH>
+```
+
+- Copy a remote repo to current folder (ssh method)
+```
+git clone <USER>@<HOST>:<PATH_TO_REPO>.git
+```
+
+- Copy a remote repo to current folder (https method)
+```
+git clone <URL_REPO>
+```
 
 
 ## Reference
