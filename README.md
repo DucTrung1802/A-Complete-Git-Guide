@@ -142,11 +142,51 @@ git clone <URL_REPO>
 
 ##### a) Function
 
-- Add file contents to the index
+- Add file contents to the **`index`**.
 
+![](Images/git%20add.png)
+
+##### b) Syntax
+
+```
+git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]
+	  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]] [--sparse]
+	  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]
+	  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	  [--] [<pathspec>…​]
+```
+
+##### c) Option
+
+[git add](https://git-scm.com/docs/git-add#_options)
+
+##### d) Useful commands
+
+- Add certain file(s) / folder(s) into **`index`**
+```
+git add <NAME_FILE_1> <NAME_FILE_2> <NAME_FOLDER_1> <NAME_FOLDER_2>
+```
+
+- Add all file in **`workspace`** into **`index`**
+```
+git add -all
+```
+or
+```
+git add -A
+```
+
+- Add all file in current folder into **`index`**
+```
+git add .
+```
+
+##### e) ATTENTION
+
+- **`git add`** does not add file described in **`.gitignore`** !
 
 ## Reference
 - https://git-scm.com/docs
 - https://ndpsoftware.com/git-cheatsheet.html
 - https://backlog.com/git-tutorial/vn/intro/intro1_2.html
-- 
+- https://ndpsoftware.com/git-cheatsheet.html#loc=index
