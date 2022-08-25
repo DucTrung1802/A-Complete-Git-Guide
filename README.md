@@ -361,10 +361,45 @@ git commit --amend -m <COMMENT_OF_THIS_COMMIT>
 
 ---
 
+#### 4.2.5 git reset
+
+##### a) Function
+
+- Reset current HEAD to the specified state
+
+![](Images/git%20reset.png)
+
+##### b) Syntax
+```
+git reset [-q] [<tree-ish>] [--] <pathspec>…​
+git reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]
+git reset (--patch | -p) [<tree-ish>] [--] [<pathspec>…​]
+git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
+```
+
+##### c) Option
+
+[git reset](https://git-scm.com/docs/git-reset#_options)
+
+##### d) Useful commands
+
+- Reset all files in **`index`** back to **`working tree`** (inverse of **`git add`**).
+```
+git reset
+```
+
+- Reset a certain file in **`index`** back to **`working tree`**.
+```
+git reset <FILE_NAME_1> <FILE_NAME_2>
+```
+
+- 
+
+
+
 
 
 #### x.x.x git bla bla
-
 
 ##### a) Function
 
