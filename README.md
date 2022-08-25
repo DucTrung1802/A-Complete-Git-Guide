@@ -31,8 +31,8 @@ Explanation:
 - **`remote-tracking reference`**: A copy of **`remote branch`** on your local machine.
 - **`local branch`**: A series of **`snapshot`** on the local machine.
 - **`index / staging area`**: The preparation space for a new **` snapshot`**.
-- **`workspace`**: The current state of your project on local machine, may contains `committed files and uncommitted files` or `committed files` only.
-- **`stash`**: a temporary local **`snapshot`** of the **`workspace`**, used to save the current state of the **`workspace`** while you work on another branch.
+- **`working tree`**: The current state of your project on local machine, may contains `committed files and uncommitted files` or `committed files` only.
+- **`stash`**: a temporary local **`snapshot`** of the **`working tree`**, used to save the current state of the **`working tree`** while you work on another branch.
 
 ## 4. Git Commands
 
@@ -171,7 +171,7 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
 git add <NAME_FILE_1> <NAME_FILE_2> <NAME_FOLDER_1> <NAME_FOLDER_2>
 ```
 
-- Add all file in **`workspace`** into **`index`**
+- Add all file in **`working tree`** into **`index`**
 ```
 git add -all
 ```
@@ -195,7 +195,7 @@ git add .
 
 ##### a) Function
 
-- Show the **`workspace`** status.
+- Show the **`working tree`** status.
 
 ![](Images/git%20status.png)
 
@@ -211,34 +211,34 @@ git status [<options>…​] [--] [<pathspec>…​]
 
 ##### d) Useful commands
 
-- Show the **`workspace`** status
+- Show the **`working tree`** status
 ```
 git status
 ```
 
-- Show the **`workspace`** status in simple form
+- Show the **`working tree`** status in simple form
 ```
 git status -s
 ```
 
-- Short Format
-```
-[X][Y] PATH
-[X][Y] ORIG_PATH -> PATH
-```
+- Output for short format
+> [X][Y] PATH
+> 
+> [X][Y] ORIGINAL_PATH -> PATH
+
 Explain:
 [X]: The status of the **`index`**.
-[Y]: The status of the **`workspace`**.
+[Y]: The status of the **`working tree`**.
 
 Example:
 ```
 A  abcd.txt
 ```
-&rarr; `abcd.txt` is added in **`index`** and unmodified in **`workspace`**.
+&rarr; `abcd.txt` is added in **`index`** and unmodified in **`working tree`**.
 ```
 AD  abcd.txt
 ```
-&rarr; `abcd.txt` is added in **`index`** and deleted in **`workspace`**.
+&rarr; `abcd.txt` is added in **`index`** and deleted in **`working tree`**.
 
 - Table of [X] or [Y]
 
@@ -256,6 +256,25 @@ AD  abcd.txt
 ---
 
 #### 4.2.3 git diff
+
+##### a) Function
+- Show changes between commits, commit and working tree, etc
+
+
+
+#### x.x.x git bla bla
+
+##### a) Function
+
+##### b) Syntax
+
+##### c) Option
+
+##### d) Useful commands
+
+
+
+
 
 
 ## Reference
