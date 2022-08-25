@@ -393,7 +393,37 @@ git reset
 git reset <FILE_NAME_1> <FILE_NAME_2>
 ```
 
-- 
+- Reset to a commit and `does not touch the index file or the working tree at all`.
+```
+git reset --soft <HASHED_COMMIT>
+```
+Example:
+> git reset --soft bd33c1
+
+
+- Reset to a commit and **`reset the index but not the working tree`**.
+```
+git reset <HASHED_COMMIT>
+```
+or
+```
+git reset --mixed <HASHED_COMMIT>
+```
+
+- Reset to a commit and **`reset the index and working tree`**.
+```
+git reset --hard <HASHED_COMMIT>
+```
+
+---
+
+#### 4.2.6 git rm
+
+
+
+
+
+
 
 
 
