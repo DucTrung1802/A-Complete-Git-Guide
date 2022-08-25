@@ -223,6 +223,7 @@ git status -s
 
 - Output for short format
 > [X][Y] PATH
+> 
 > [X][Y] ORIGINAL_PATH -> PATH
 
 Explain:
