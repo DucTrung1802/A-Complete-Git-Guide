@@ -294,7 +294,7 @@ git diff
 git diff --cached
 ```
 
-- Show differences of staged files between **`index`**, modificated files in **`working tree`** and last commit of current branch.
+- Show differences of staged files between **`index`**, tracking files (modificated files) in **`working tree`** and last commit of current branch.
 ```
 git diff head
 ```
@@ -316,18 +316,64 @@ Example:
 git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
 ```
 
+---
+
 #### 4.2.4 git commit
 
+##### a) Function
+
+- Record changes to the repository.
+
+![](Images/git%20commit.png)
+
+##### b) Syntax
+```
+git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+	   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+	   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+	   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+	   [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+	   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	   [(--trailer <token>[(=|:)<value>])…​] [-S[<keyid>]]
+	   [--] [<pathspec>…​]
+```
+
+##### c) Option
+
+[git commit](https://git-scm.com/docs/git-commit#_options)
+
+##### d) Useful commands
+
+- Create a new commit with all changes in **`index`**.
+```
+git commit -m <COMMENT_OF_THIS_COMMIT>
+```
+
+- Create a new commit with all changes in **`index`** and tracking files (modificated files) in **`working tree`**.
+```
+git commit -a -m <COMMENT_OF_THIS_COMMIT>
+```
+
+- Change comment of the last UNPUSHED commit.
+```
+git commit --amend -m <COMMENT_OF_THIS_COMMIT>
+```
+
+---
 
 
 
 #### x.x.x git bla bla
 
+
 ##### a) Function
+
 
 ##### b) Syntax
 
+
 ##### c) Option
+
 
 ##### d) Useful commands
 
