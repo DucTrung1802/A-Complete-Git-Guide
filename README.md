@@ -166,6 +166,8 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
 
 ##### d) Useful commands
 
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
 - Add certain file(s) / folder(s) into **`index`**
 ```
 git add <NAME_FILE_1> <NAME_FILE_2> <NAME_FOLDER_1> <NAME_FOLDER_2>
@@ -210,6 +212,8 @@ git status [<options>…​] [--] [<pathspec>…​]
 [git status](https://git-scm.com/docs/git-status#_options)
 
 ##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Show the **`working tree`** status
 ```
@@ -258,7 +262,55 @@ AD  abcd.txt
 #### 4.2.3 git diff
 
 ##### a) Function
-- Show changes between commits, commit and working tree, etc
+- Show changes between commits, commit and **`working tree`**, etc
+
+##### b) Syntax
+```
+git diff [<options>] [<commit>] [--] [<path>…​]
+git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>…​]
+git diff [<options>] [--merge-base] <commit> [<commit>…​] <commit> [--] [<path>…​]
+git diff [<options>] <commit>…​<commit> [--] [<path>…​]
+git diff [<options>] <blob> <blob>
+git diff [<options>] --no-index [--] <path> <path>
+```
+
+##### c) Option
+
+[git diff](https://git-scm.com/docs/git-diff#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Show differences of EXISTING files between **`working tree`** and **`index`**.
+```
+git diff
+```
+
+- Show differences of staged files between **`index`** and last commit of current branch.
+```
+git diff --cached
+```
+
+- Show differences of staged files between **`index`** and last commit of <BRANCH_NAME> branch.
+```
+git diff <BRANCH_NAME>
+```
+
+- Show differences between hashed commit 1 and hashed commit 2.
+```
+git diff <HASHED_COMMIT_1> <HASHED_COMMIT_2>
+```
+Example:
+> git diff 981f4e 79c9bf
+
+- Show differences between branch 2 and branch 1.
+```
+git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
+```
+
+4.2.4 git 
+
 
 
 
