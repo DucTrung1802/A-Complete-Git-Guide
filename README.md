@@ -221,11 +221,10 @@ git status
 git status -s
 ```
 
-- Short Format
-```
-[X][Y] PATH
-[X][Y] ORIG_PATH -> PATH
-```
+- Output for short format
+> [X][Y] PATH
+> [X][Y] ORIGINAL_PATH -> PATH
+
 Explain:
 [X]: The status of the **`index`**.
 [Y]: The status of the **`workspace`**.
