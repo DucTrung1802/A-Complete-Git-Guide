@@ -264,6 +264,8 @@ AD  abcd.txt
 ##### a) Function
 - Show changes between commits, commit and **`working tree`**, etc
 
+![](Images/git%20diff.png)
+
 ##### b) Syntax
 ```
 git diff [<options>] [<commit>] [--] [<path>…​]
@@ -292,7 +294,12 @@ git diff
 git diff --cached
 ```
 
-- Show differences of staged files between **`index`** and last commit of <BRANCH_NAME> branch.
+- Show differences of staged files between **`index`**, modificated files in **`working tree`** and last commit of current branch.
+```
+git diff head
+```
+
+- Show differences of staged files between **`index`**, modificated files in **`working tree`** and last commit of <BRANCH_NAME> branch.
 ```
 git diff <BRANCH_NAME>
 ```
@@ -309,7 +316,7 @@ Example:
 git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
 ```
 
-4.2.4 git 
+#### 4.2.4 git commit
 
 
 
