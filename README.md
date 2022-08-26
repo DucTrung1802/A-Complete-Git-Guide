@@ -344,6 +344,8 @@ git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
 
 ##### d) Useful commands
 
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
 - Create a new commit with all changes in **`index`**.
 ```bash
 git commit -m <COMMENT_OF_THIS_COMMIT>
@@ -382,6 +384,8 @@ git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
 [git reset](https://git-scm.com/docs/git-reset#_options)
 
 ##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Reset all files in **`index`** back to **`working tree`** (inverse of **`git add`**).
 ```bash
@@ -446,6 +450,82 @@ git mv <OLD_FILE_NAME> <NEW_FILE_NAME>
 git mv <FILE_NAME> <FOLDER_NAME>
 ```
 
+### 4.3 Branching and Merging
+
+#### 4.3.1 git branch
+
+##### a) Function
+
+- List, create, or delete branches.
+  
+![](Images/git%20branch.png)
+
+##### b) Syntax
+```bash
+git branch [--color[=<when>] | --no-color] [--show-current]
+	[-v [--abbrev=<n> | --no-abbrev]]
+	[--column[=<options>] | --no-column] [--sort=<key>]
+	[--merged [<commit>]] [--no-merged [<commit>]]
+	[--contains [<commit>]] [--no-contains [<commit>]]
+	[--points-at <object>] [--format=<format>]
+	[(-r | --remotes) | (-a | --all)]
+	[--list] [<pattern>…​]
+git branch [--track[=(direct|inherit)] | --no-track] [-f]
+	[--recurse-submodules] <branchname> [<start-point>]
+git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
+git branch --unset-upstream [<branchname>]
+git branch (-m | -M) [<oldbranch>] <newbranch>
+git branch (-c | -C) [<oldbranch>] <newbranch>
+git branch (-d | -D) [-r] <branchname>…​
+git branch --edit-description [<branchname>]
+```
+
+##### c) Option
+
+[git branch](https://git-scm.com/docs/git-branch#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Show current branches.
+```bash
+git branch
+```
+
+- Check out a branch.
+```bash
+git checkout <NAME_OF_EXISTING_BRANCH>
+```
+
+- Create a new local branch.
+```bash
+git branch <NEW_BRANCH_NAME>
+```
+
+- Create a new local + remote branch
+```bash
+git branch <NEW_BRANCH_NAME>
+git push --set-upstream origin <NEW_BRANCH_NAME>
+```
+
+- Rename a branch on local + remote
+```bash
+git branch -m <OLD_BRANCH_NAME> <NEW_BRANCH_NAME>
+git push origin HEAD
+git push origin -d <OLD_BRANCH_NAME>
+```
+
+- Delete a branch
+
+Checkout another branch before delete a branch !
+
+```bash
+git checkout <ANOTHER_BRANCH_NAME>
+git branch -d <WANT_TO_DELETE_BRANCH_NAME>
+git push origin -d <WANT_TO_DELETE_BRANCH_NAME>
+```
+
 
 
 
@@ -464,6 +544,8 @@ git mv <FILE_NAME> <FOLDER_NAME>
 [git reset](https://git-scm.com/docs/git-reset#_options)
 
 ##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
 
 
 
