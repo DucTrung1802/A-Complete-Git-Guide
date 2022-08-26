@@ -586,6 +586,26 @@ git checkout 981f4e7
 
 Use `git checkout <EXISTING_BRANCH_NAME>` to return to a branch.
 
+#### 4.3.3 git merge
+
+##### a) Function
+
+- Join two or more development histories together.
+
+
+
+##### b) Syntax
+
+
+##### c) Option
+
+[git reset](https://git-scm.com/docs/git-reset#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+
 
 
 #### x.x.x git bla bla
@@ -603,10 +623,6 @@ Use `git checkout <EXISTING_BRANCH_NAME>` to return to a branch.
 ##### d) Useful commands
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
-
-
-
-
 
 
 ## Reference
