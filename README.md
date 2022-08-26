@@ -536,6 +536,8 @@ git push origin -d <WANT_TO_DELETE_BRANCH_NAME>
 
 - Switch branches or restore working tree files.
 
+![](Images/git%20checkout.png)
+
 ##### b) Syntax
 ```bash
 git checkout [-q] [-f] [-m] [<branch>]
