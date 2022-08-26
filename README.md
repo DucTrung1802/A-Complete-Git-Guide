@@ -450,6 +450,8 @@ git mv <OLD_FILE_NAME> <NEW_FILE_NAME>
 git mv <FILE_NAME> <FOLDER_NAME>
 ```
 
+---
+
 ### 4.3 Branching and Merging
 
 #### 4.3.1 git branch
@@ -526,8 +528,61 @@ git branch -d <WANT_TO_DELETE_BRANCH_NAME>
 git push origin -d <WANT_TO_DELETE_BRANCH_NAME>
 ```
 
+---
 
+#### 4.3.2 git checkout
 
+##### a) Function
+
+- Switch branches or restore working tree files.
+
+##### b) Syntax
+```bash
+git checkout [-q] [-f] [-m] [<branch>]
+git checkout [-q] [-f] [-m] --detach [<branch>]
+git checkout [-q] [-f] [-m] [--detach] <commit>
+git checkout [-q] [-f] [-m] [[-b|-B|--orphan] <new-branch>] [<start-point>]
+git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <pathspec>…​
+git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-from-file=<file> [--pathspec-file-nul]
+git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>…​]
+```
+
+##### c) Option
+
+[git checkout](https://git-scm.com/docs/git-checkout#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Change branch.
+```bash
+git checkout <EXISTING_BRANCH_NAME>
+```
+
+- Restore a file in <HASHED_COMMIT>. Changes will be shown in **`index`**.
+```bash
+git checkout <HASHED_COMMIT> <FILE_NAME>
+```
+
+- Checkout a commit.
+
+Show log in simple form to see all <HASHED_COMMIT>.
+```bash
+git log --oneline
+```
+
+Checkout a commit.
+```bash
+git checkout <HASHED_COMMIT>
+```
+
+Example
+```bash
+git checkout 981f4e7
+```
+
+Use `git checkout <EXISTING_BRANCH_NAME>` to return to a branch.
 
 
 
