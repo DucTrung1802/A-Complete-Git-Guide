@@ -46,7 +46,7 @@ Explanation:
 
 ##### b) Syntax
 
-```
+```bash
 git init [-q | --quiet] [--bare] [--template=<template-directory>]
 	  [--separate-git-dir <git-dir>] [--object-format=<format>]
 	  [-b <branch-name> | --initial-branch=<branch-name>]
@@ -62,7 +62,7 @@ git init [-q | --quiet] [--bare] [--template=<template-directory>]
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Create a new folder for a new repo
-```
+```bash
 mkdir <REPO_NAME>
 cd <REPO_NAME>
 ```
@@ -71,17 +71,17 @@ cd <REPO_NAME>
 
 **Make sure you already initialized a remote repo with name <REPO_NAME> on Github.**
 
-```
+```bash
 git init
 echo # New Repo > README.md
 git add README.md
 git commit -m "Initial commit"
 git branch -M main
 ```
-```
+```bash
 git remote add origin https://github.com/<GIT_USERNAME>/<REPO_NAME>.git
 ```
-```
+```bash
 git push -u origin main
 ```
 
@@ -98,7 +98,7 @@ git push -u origin main
 
 ##### b) Syntax
 
-```
+```bash
 git clone [--template=<template-directory>]
 	  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
 	  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]
@@ -119,22 +119,22 @@ git clone [--template=<template-directory>]
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Copy a local repo to current folder.
-```
+```bash
 git clone <LOCAL_REPO_PATH>
 ```
 
 - Copy a local repo to a cetain folder.
-```
+```bash
 git clone <LOCAL_REPO_PATH> <DESTINATION_FOLDER_PATH>
 ```
 
 - Copy a remote repo to current folder (ssh method)
-```
+```bash
 git clone <USER>@<HOST>:<PATH_TO_REPO>.git
 ```
 
 - Copy a remote repo to current folder (https method)
-```
+```bash
 git clone <URL_REPO>
 ```
 
@@ -152,7 +152,7 @@ git clone <URL_REPO>
 
 ##### b) Syntax
 
-```
+```bash
 git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]
 	  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]] [--sparse]
 	  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]
@@ -169,21 +169,21 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Add certain file(s) / folder(s) into **`index`**
-```
+```bash
 git add <NAME_FILE_1> <NAME_FILE_2> <NAME_FOLDER_1> <NAME_FOLDER_2>
 ```
 
 - Add all file in **`working tree`** into **`index`**
-```
+```bash
 git add -all
 ```
 or
-```
+```bash
 git add -A
 ```
 
 - Add all file in current folder into **`index`**
-```
+```bash
 git add .
 ```
 
@@ -203,7 +203,7 @@ git add .
 
 ##### b) Syntax
 
-```
+```bash
 git status [<options>…​] [--] [<pathspec>…​]
 ```
 
@@ -216,12 +216,12 @@ git status [<options>…​] [--] [<pathspec>…​]
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Show the **`working tree`** status
-```
+```bash
 git status
 ```
 
 - Show the **`working tree`** status in simple form
-```
+```bash
 git status -s
 ```
 
@@ -235,11 +235,11 @@ Explain:
 [Y]: The status of the **`working tree`**.
 
 Example:
-```
+```bash
 A  abcd.txt
 ```
 &rarr; `abcd.txt` is added in **`index`** and unmodified in **`working tree`**.
-```
+```bash
 AD  abcd.txt
 ```
 &rarr; `abcd.txt` is added in **`index`** and deleted in **`working tree`**.
@@ -267,7 +267,7 @@ AD  abcd.txt
 ![](Images/git%20diff.png)
 
 ##### b) Syntax
-```
+```bash
 git diff [<options>] [<commit>] [--] [<path>…​]
 git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>…​]
 git diff [<options>] [--merge-base] <commit> [<commit>…​] <commit> [--] [<path>…​]
@@ -285,34 +285,34 @@ git diff [<options>] --no-index [--] <path> <path>
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
 - Show differences of EXISTING files between **`working tree`** and **`index`**.
-```
+```bash
 git diff
 ```
 
 - Show differences of staged files between **`index`** and last commit of current branch.
-```
+```bash
 git diff --cached
 ```
 
 - Show differences of staged files between **`index`**, tracking files (modificated files) in **`working tree`** and last commit of current branch.
-```
+```bash
 git diff head
 ```
 
 - Show differences of staged files between **`index`**, modificated files in **`working tree`** and last commit of <BRANCH_NAME> branch.
-```
+```bash
 git diff <BRANCH_NAME>
 ```
 
 - Show differences between hashed commit 1 and hashed commit 2.
-```
+```bash
 git diff <HASHED_COMMIT_1> <HASHED_COMMIT_2>
 ```
 Example:
 > git diff 981f4e 79c9bf
 
 - Show differences between branch 2 and branch 1.
-```
+```bash
 git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
 ```
 
@@ -327,7 +327,7 @@ git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
 ![](Images/git%20commit.png)
 
 ##### b) Syntax
-```
+```bash
 git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
 	   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
 	   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
@@ -345,17 +345,17 @@ git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
 ##### d) Useful commands
 
 - Create a new commit with all changes in **`index`**.
-```
+```bash
 git commit -m <COMMENT_OF_THIS_COMMIT>
 ```
 
 - Create a new commit with all changes in **`index`** and tracking files (modificated files) in **`working tree`**.
-```
+```bash
 git commit -a -m <COMMENT_OF_THIS_COMMIT>
 ```
 
 - Change comment of the last UNPUSHED commit.
-```
+```bash
 git commit --amend -m <COMMENT_OF_THIS_COMMIT>
 ```
 
@@ -370,7 +370,7 @@ git commit --amend -m <COMMENT_OF_THIS_COMMIT>
 ![](Images/git%20reset.png)
 
 ##### b) Syntax
-```
+```bash
 git reset [-q] [<tree-ish>] [--] <pathspec>…​
 git reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]
 git reset (--patch | -p) [<tree-ish>] [--] [<pathspec>…​]
@@ -384,17 +384,17 @@ git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
 ##### d) Useful commands
 
 - Reset all files in **`index`** back to **`working tree`** (inverse of **`git add`**).
-```
+```bash
 git reset
 ```
 
 - Reset a certain file in **`index`** back to **`working tree`**.
-```
+```bash
 git reset <FILE_NAME_1> <FILE_NAME_2>
 ```
 
 - Reset to a commit and `does not touch the index file or the working tree at all`.
-```
+```bash
 git reset --soft <HASHED_COMMIT>
 ```
 Example:
@@ -402,27 +402,49 @@ Example:
 
 
 - Reset to a commit and **`reset the index but not the working tree`**.
-```
+```bash
 git reset <HASHED_COMMIT>
 ```
 or
-```
+```bash
 git reset --mixed <HASHED_COMMIT>
 ```
 
 - Reset to a commit and **`reset the index and working tree`**.
-```
+```bash
 git reset --hard <HASHED_COMMIT>
 ```
 
 ---
 
-#### 4.2.6 git rm
+#### 4.2.6 git mv
+
+##### a) Function
+
+- Move or rename a file, a directory, or a symlink.
+
+##### b) Syntax
+```bash
+git mv [-v] [-f] [-n] [-k] <source> <destination>
+git mv [-v] [-f] [-n] [-k] <source> ... <destination directory>
+```
+
+##### c) Option
+
+[git mv](https://git-scm.com/docs/git-mv#_options)
 
 
+##### d) Useful commands
 
+- Rename file
+```bash
+git mv <OLD_FILE_NAME> <NEW_FILE_NAME>
+```
 
-
+- Move file
+```bash
+git mv <FILE_NAME> <FOLDER_NAME>
+```
 
 
 
@@ -439,6 +461,7 @@ git reset --hard <HASHED_COMMIT>
 
 ##### c) Option
 
+[git reset](https://git-scm.com/docs/git-reset#_options)
 
 ##### d) Useful commands
 
