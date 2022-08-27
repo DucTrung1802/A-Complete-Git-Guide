@@ -53,7 +53,7 @@ git init [-q | --quiet] [--bare] [--template=<template-directory>]
 	  [--shared[=<permissions>]] [<directory>]
 ```
 
-##### c) Option
+##### c) Options
 
 [git init](https://git-scm.com/docs/git-init#_options)
 
@@ -110,7 +110,7 @@ git clone [--template=<template-directory>]
 	  [<directory>]
 ```
 
-##### c) Option
+##### c) Options
 
 [git clone](https://git-scm.com/docs/git-clone#_options)
 
@@ -160,7 +160,7 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
 	  [--] [<pathspec>…​]
 ```
 
-##### c) Option
+##### c) Options
 
 [git add](https://git-scm.com/docs/git-add#_options)
 
@@ -207,7 +207,7 @@ git add .
 git status [<options>…​] [--] [<pathspec>…​]
 ```
 
-##### c) Option
+##### c) Options
 
 [git status](https://git-scm.com/docs/git-status#_options)
 
@@ -276,7 +276,7 @@ git diff [<options>] <blob> <blob>
 git diff [<options>] --no-index [--] <path> <path>
 ```
 
-##### c) Option
+##### c) Options
 
 [git diff](https://git-scm.com/docs/git-diff#_options)
 
@@ -338,7 +338,7 @@ git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
 	   [--] [<pathspec>…​]
 ```
 
-##### c) Option
+##### c) Options
 
 [git commit](https://git-scm.com/docs/git-commit#_options)
 
@@ -379,7 +379,7 @@ git reset (--patch | -p) [<tree-ish>] [--] [<pathspec>…​]
 git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
 ```
 
-##### c) Option
+##### c) Options
 
 [git reset](https://git-scm.com/docs/git-reset#_options)
 
@@ -433,7 +433,7 @@ git mv [-v] [-f] [-n] [-k] <source> <destination>
 git mv [-v] [-f] [-n] [-k] <source> ... <destination directory>
 ```
 
-##### c) Option
+##### c) Options
 
 [git mv](https://git-scm.com/docs/git-mv#_options)
 
@@ -482,7 +482,7 @@ git branch (-d | -D) [-r] <branchname>…​
 git branch --edit-description [<branchname>]
 ```
 
-##### c) Option
+##### c) Options
 
 [git branch](https://git-scm.com/docs/git-branch#_options)
 
@@ -549,7 +549,7 @@ git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-
 git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>…​]
 ```
 
-##### c) Option
+##### c) Options
 
 [git checkout](https://git-scm.com/docs/git-checkout#_options)
 
@@ -586,6 +586,51 @@ git checkout 981f4e7
 
 Use `git checkout <EXISTING_BRANCH_NAME>` to return to a branch.
 
+#### 4.3.3 git merge
+
+##### a) Function
+
+- Join two or more development histories together.
+
+![](Images/git%20merge.png)
+
+##### b) Syntax
+```bash
+git merge [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
+	[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]
+	[--[no-]allow-unrelated-histories]
+	[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>]
+	[--into-name <branch>] [<commit>…​]
+git merge (--continue | --abort | --quit)
+```
+
+##### c) Options
+
+[git merge](https://git-scm.com/docs/git-merge#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Merge `branch A` &rarr; `branch B`.
+```bash
+git checkout <BRANCH_B>
+git merge <BRANCH_A>
+git push
+```
+
+- Squash then Merge `branch A` &rarr; `branch B`.
+```bash
+git checkout <BRANCH_B>
+git merge --squash <BRANCH_A>
+git commit -m "<MESSAGE_OF_SQUASH_MERGE_COMMIT>"
+git push
+```
+
+---
+
+
+
 
 
 #### x.x.x git bla bla
@@ -596,17 +641,13 @@ Use `git checkout <EXISTING_BRANCH_NAME>` to return to a branch.
 ##### b) Syntax
 
 
-##### c) Option
+##### c) Options
 
 [git reset](https://git-scm.com/docs/git-reset#_options)
 
 ##### d) Useful commands
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
-
-
-
-
 
 
 ## Reference
