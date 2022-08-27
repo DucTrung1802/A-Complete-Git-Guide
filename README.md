@@ -612,8 +612,22 @@ git merge (--continue | --abort | --quit)
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
-- 
+- Merge `branch A` &rarr; `branch B`.
+```bash
+git checkout <BRANCH_B>
+git merge <BRANCH_A>
+git push
+```
 
+- Squash then Merge `branch A` &rarr; `branch B`.
+```bash
+git checkout <BRANCH_B>
+git merge --squash <BRANCH_A>
+git commit -m "<MESSAGE_OF_SQUASH_MERGE_COMMIT>"
+git push
+```
+
+---
 
 
 
