@@ -630,6 +630,24 @@ git push
 
 ---
 
+#### 4.3.4 git log
+
+##### a) Function
+
+- 
+
+##### b) Syntax
+
+
+##### c) Options
+
+[git reset](https://git-scm.com/docs/git-reset#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+
 
 
 
