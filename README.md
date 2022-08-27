@@ -592,8 +592,6 @@ Use `git checkout <EXISTING_BRANCH_NAME>` to return to a branch.
 
 - Join two or more development histories together.
 
-![](Images/git%20merge.png)
-
 ##### b) Syntax
 ```bash
 git merge [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
@@ -619,6 +617,8 @@ git merge <BRANCH_A>
 git push
 ```
 
+![](Images/git%20merge.png)
+
 - Squash then Merge `branch A` &rarr; `branch B`.
 ```bash
 git checkout <BRANCH_B>
@@ -626,6 +626,7 @@ git merge --squash <BRANCH_A>
 git commit -m "<MESSAGE_OF_SQUASH_MERGE_COMMIT>"
 git push
 ```
+![](Images/git%20merge%20--squash.png)
 
 ---
 
