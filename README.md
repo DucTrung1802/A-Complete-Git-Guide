@@ -586,6 +586,8 @@ git checkout 981f4e7
 
 Use `git checkout <EXISTING_BRANCH_NAME>` to return to a branch.
 
+---
+
 #### 4.3.3 git merge
 
 ##### a) Function
@@ -627,6 +629,108 @@ git commit -m "<MESSAGE_OF_SQUASH_MERGE_COMMIT>"
 git push
 ```
 ![](Images/git%20merge%20--squash.png)
+
+---
+
+#### 4.3.4 git log
+
+##### a) Function
+
+- Show commit logs.
+
+##### b) Syntax
+```bash
+git log [<options>] [<revision-range>] [[--] <path>…​]
+```
+
+##### c) Options
+
+[git log](https://git-scm.com/docs/git-log#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Show detail commit logs of current branch.
+```bash
+git log
+```
+
+Action with `git log`:
+
+| Key | Description |
+| :---: | ----------- |
+| [ENTER] | Next line |
+| w | Next page |
+| [Spacebar] | Previous page |
+| q | Quit |
+| ?`keyword` | Find all commits containing `keyword` |
+| n | Go to previous search result  |
+| N | Go to next search result |
+
+- Show a certain amount of logs.
+```bash
+git log -<NUMBER_OF_LOG>
+```
+Example:
+```bash
+git log -2
+```
+
+- Show changes of a certain amount of logs in detail.
+```bash
+git log -p -<NUMBER_OF_LOG>
+```
+Example:
+```bash
+git log -p -2
+```
+
+- Show changes of a certain amount of logs in brief.
+```bash
+git log --stat -<NUMBER_OF_LOG>
+```
+Example:
+```bash
+git log --stat -2
+```
+
+- Show logs in a line.
+```bash
+git log --oneline
+```
+Example:
+```bash
+git log --stat --oneline -10
+```
+
+- Filter logs by date
+```bash
+git log --after="<YEAR>-<MONTH>-<DAY>" --before="<YEAR>-<MONTH>-<DAY>"
+```
+Example: Filter logs in 2019.
+```bash
+git log --after="2019-1-1" --before="2019-12-31"
+```
+
+- Filter logs by author
+```bash
+git log --oneline --author="<NAME_OF_AUTHOR>"
+```
+Example:
+```bash
+git log --oneline --author="trungld11"
+```
+
+- Filter logs by merging commits.
+```bash
+git log --merges
+```
+
+- Filter logs by non-merging commits.
+```bash
+git log --no-merges
+```
 
 ---
 
