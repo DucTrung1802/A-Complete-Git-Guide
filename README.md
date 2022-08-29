@@ -845,6 +845,27 @@ git stash clear
 
 ---
 
+### 4.4 Sharing and Updating Projects
+
+#### 4.4.1 git fetch
+
+##### a) Function
+
+- Download objects and refs
+
+
+##### b) Syntax
+
+
+##### c) Options
+
+[git reset](https://git-scm.com/docs/git-reset#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+
 
 
 
