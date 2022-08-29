@@ -778,12 +778,12 @@ git stash save -a -m "<COMMENT_OF_COMMIT>"
 git stash list
 ```
 
-- Pop stash of current branch (retreive old work).
+- Retrieve old work of current branch and **`REMOVE`** the stashed state (the top stash in the stash list).
 ```bash
 git stash pop
 ```
 
-- 
+- Retrieve old work of current branch and **`DO NOT REMOVE`**  the stashed state.
 
 
 
