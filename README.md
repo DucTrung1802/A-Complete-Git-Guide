@@ -734,8 +734,68 @@ git log --no-merges
 
 ---
 
+#### 4.3.5 git stash
+
+##### a) Function
+
+- Save the current state of **`working tree`** and **`index`** to a temporary commit to switch to another branch / task.
+
+![](Images/git%20stash.png)
+
+##### b) Syntax
+```bash
+git stash list [<log-options>]
+git stash show [-u|--include-untracked|--only-untracked] [<diff-options>] [<stash>]
+git stash drop [-q|--quiet] [<stash>]
+git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+git stash branch <branchname> [<stash>]
+git stash [push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-q|--quiet]
+	     [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+	     [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	     [--] [<pathspec>…​]]
+git stash clear
+git stash create [<message>]
+git stash store [-m|--message <message>] [-q|--quiet] <commit>
+```
+
+##### c) Options
+
+[git stash](https://git-scm.com/docs/git-stash#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+**`STASH = SAVE CURRENT WORKING TREE + INDEX`**
+
+- Standard stash for current branch.
+```bash
+git stash save -a -m "<COMMENT_OF_COMMIT>"
+```
+
+- List all current stashes.
+```bash
+git stash list
+```
+
+- Pop stash of current branch (retreive old work).
+```bash
+git stash pop
+```
+
+- 
 
 
+
+
+
+
+
+
+
+
+
+---
 
 
 #### x.x.x git bla bla
