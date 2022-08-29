@@ -168,7 +168,7 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
-- Add certain file(s) / folder(s) into **`index`**
+- Add specific file(s) / folder(s) into **`index`**
 ```bash
 git add <NAME_FILE_1> <NAME_FILE_2> <NAME_FOLDER_1> <NAME_FOLDER_2>
 ```
@@ -392,7 +392,7 @@ git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
 git reset
 ```
 
-- Reset a certain file in **`index`** back to **`working tree`**.
+- Reset a specific file in **`index`** back to **`working tree`**.
 ```bash
 git reset <FILE_NAME_1> <FILE_NAME_2>
 ```
@@ -668,7 +668,7 @@ Action with `git log`:
 | n | Go to previous search result  |
 | N | Go to next search result |
 
-- Show a certain amount of logs.
+- Show a specific amount of logs.
 ```bash
 git log -<NUMBER_OF_LOG>
 ```
@@ -677,7 +677,7 @@ Example:
 git log -2
 ```
 
-- Show changes of a certain amount of logs in detail.
+- Show changes of a specific amount of logs in detail.
 ```bash
 git log -p -<NUMBER_OF_LOG>
 ```
@@ -686,7 +686,7 @@ Example:
 git log -p -2
 ```
 
-- Show changes of a certain amount of logs in brief.
+- Show changes of a specific amount of logs in brief.
 ```bash
 git log --stat -<NUMBER_OF_LOG>
 ```
@@ -778,24 +778,74 @@ git stash save -a -m "<COMMENT_OF_COMMIT>"
 git stash list
 ```
 
-- Retrieve old work of current branch and **`REMOVE`** the stashed state (the top stash in the stash list).
+Output:
+> stash@{0}: On feature_1: comment of feature 1 branch
+> stash@{1}: On feature_2: comment of feature 2 branch
+> stash@{2}: On main: comment of main branch
+
+- Retrieve old work of `current` branch and **`REMOVE`** the stashed state (the top stash in the stash list).
 ```bash
-git stash pop
+git stash pop # ~ git stash pop stash@{0}
 ```
 
-- Retrieve old work of current branch and **`DO NOT REMOVE`**  the stashed state.
+- Retrieve old work of `a specific` branch and **`REMOVE`** the stashed state (the top stash in the stash list).
+```bash
+git stash pop stash@{<ORDER_OF_STASH>}
+```
 
+- Retrieve old work of `current` branch and **`DO NOT REMOVE`**  the stashed state.
+```bash
+git stash apply
+```
 
+- Retrieve old work of `a specific` branch and **`DO NOT REMOVE`**  the stashed state.
+```bash
+git stash apply stash@{<ORDER_OF_STASH>}
+```
 
+- Show brief change of newest stash.
+```bash
+git stash show # ~ git stash show stash@{0} 
+```
 
+- Show detail change of newest stash.
+```bash
+git stash show -p # ~ git stash show -p stash@{0} 
+```
 
+- Show brief change of `a specific` branch and **`DO NOT REMOVE`**  the stashed state.
+```bash
+git stash show stash@{<ORDER_OF_STASH>}
+```
 
+- Create a new branch with the changes of last stash.
+```bash
+git stash branch <NAME_OF_NEW_BRANCH> # ~ git stash branch <NAME_OF_NEW_BRANCH> stash@{0}
+```
 
+- Create a new branch with the changes of a specific stash.
+```bash
+git stash branch <NAME_OF_NEW_BRANCH> stash@{<ORDER_OF_STASH>}
+```
 
+- <span style="color:red"><b>DELETE THE LAST STASH (DANGEROUS - CANNOT RESTORE).</b></span>
+```bash
+git stash drop # ~ git stash drop stash@{0}
+```
 
+- <span style="color:red"><b>DELETE A SPECIFIC STASH (DANGEROUS - CANNOT RESTORE).</b></span>
+```bash
+git stash drop stash@{<ORDER_OF_STASH>}
+```
 
+- <span style="color:red"><b>DELETE ALL STASHSES (DANGEROUS - CANNOT RESTORE).</b></span>
+```bash
+git stash clear
+```
 
 ---
+
+
 
 
 #### x.x.x git bla bla
