@@ -828,17 +828,17 @@ git stash branch <NAME_OF_NEW_BRANCH> # ~ git stash branch <NAME_OF_NEW_BRANCH> 
 git stash branch <NAME_OF_NEW_BRANCH> stash@{<ORDER_OF_STASH>}
 ```
 
-- <span style="color:red"><b>DELETE THE LAST STASH (DANGEROUS - CANNOT RESTORE).</b></span>
+- ⚠️ **DELETE THE LAST STASH (DANGEROUS - CANNOT RESTORE)**. 
 ```bash
 git stash drop # ~ git stash drop stash@{0}
 ```
 
-- <span style="color:red"><b>DELETE A SPECIFIC STASH (DANGEROUS - CANNOT RESTORE).</b></span>
+- ⚠️ **DELETE A SPECIFIC STASH (DANGEROUS - CANNOT RESTORE).**
 ```bash
 git stash drop stash@{<ORDER_OF_STASH>}
 ```
 
-- <span style="color:red"><b>DELETE ALL STASHSES (DANGEROUS - CANNOT RESTORE).</b></span>
+- ⚠️ **DELETE ALL STASHSES (DANGEROUS - CANNOT RESTORE).**
 ```bash
 git stash clear
 ```
