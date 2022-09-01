@@ -851,19 +851,54 @@ git stash clear
 
 ##### a) Function
 
-- Download objects and refs
+- Download objects and refs from **`remote branch`** to **`remote-tracking reference`** (Update **`remote-tracking reference`** to the newest state of **`remote branch`** without changing **`local branch`**).
 
+![](Images/git%20fetch.png)
 
 ##### b) Syntax
-
+```bash
+git fetch [<options>] [<repository> [<refspec>…​]]
+git fetch [<options>] <group>
+git fetch --multiple [<options>] [(<repository> | <group>)…​]
+git fetch --all [<options>]
+```
 
 ##### c) Options
 
-[git reset](https://git-scm.com/docs/git-reset#_options)
+[git fetch](https://git-scm.com/docs/git-fetch#_options)
 
 ##### d) Useful commands
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Download all objects and refs of all branches.
+```bash
+git fetch origin
+```
+
+```bash
+git fetch --all
+```
+
+- Download all objects and refs of a certain branch.
+```bash
+git fetch origin <NAME_OF_BRANCH>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
