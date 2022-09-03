@@ -880,7 +880,7 @@ git fetch origin
 git fetch --all
 ```
 
-- Download all objects and refs of a certain branch.
+- Download all objects and refs of a specific branch.
 ```bash
 git fetch origin <NAME_OF_BRANCH>
 ```
@@ -908,22 +908,81 @@ git pull [<options>] [<repository> [<refspec>…​]]
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
-- Update **`working tree`** and **`local branch`** from **`remote branch`**. ATTENTION: **`working tree`** and **`index`** must be the same!
+- Update current **`working tree`** and **`local branch`** from corresponding **`remote branch`**. ATTENTION: **`working tree`** and **`index`** must be the same!
 ```bash
 git pull
 ```
 
 ---
 
+#### 4.4.3 git push
+
+##### a) Function
+
+- Update **`remote branch`** using **`local branch`**.
+
+![](Images/git%20push.png)
 
 
+##### b) Syntax
+```bash
+git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]
+	   [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
+	   [-u | --set-upstream] [-o <string> | --push-option=<string>]
+	   [--[no-]signed|--signed=(true|false|if-asked)]
+	   [--force-with-lease[=<refname>[:<expect>]] [--force-if-includes]]
+	   [--no-verify] [<repository> [<refspec>…​]]
+```
 
+##### c) Options
 
+[git push](https://git-scm.com/docs/git-push#_options)
 
+##### d) Useful commands
 
+`<SOMETHING_SOMETHING>` is the content to be filled.
 
+- Push current **`local branch`** to **`remote branch`** **FOR THE FIRST TIME**.
+```bash
+git push -u origin <NAME_OF_BRANCH>
+```
 
+- Push current **`local branch`** to **`remote branch`**.
+```bash
+git push
+```
 
+- Push a specific **`local branch`** to its **`remote branch`**.
+```bash
+git push origin <NAME_OF_BRANCH>
+```
+
+- Push all **`local branch`** to **`remote branch`**.
+```bash
+git push origin --all
+```
+
+- Delete a specific **`remote branch`**.
+```bash
+git push origin --delete <NAME_OF_BRANCH>
+```
+
+- Double check all **`remote branch`**.
+```bash
+git branch -a
+```
+
+- ⚠️ Overwrite current **`remote branch`** with current **`local branch`** **(DANGEROUS - CANNOT RESTORE)**.
+```bash
+git push -f 
+```
+
+- ⚠️ Overwrite corresponding **`remote branch`** with a specific **`local branch`** **(DANGEROUS - CANNOT RESTORE)**. 
+```bash
+git push -f <NAME_OF_BRANCH>
+```
+
+--- 
 
 
 
