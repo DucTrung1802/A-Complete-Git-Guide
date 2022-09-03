@@ -845,6 +845,86 @@ git stash clear
 
 ---
 
+### 4.4 Sharing and Updating Projects
+
+#### 4.4.1 git fetch
+
+##### a) Function
+
+- Download objects and refs from **`remote branch`** to **`remote-tracking reference`** (Update **`remote-tracking reference`** to the newest state of **`remote branch`** without changing **`local branch`**).
+
+![](Images/git%20fetch.png)
+
+##### b) Syntax
+```bash
+git fetch [<options>] [<repository> [<refspec>…​]]
+git fetch [<options>] <group>
+git fetch --multiple [<options>] [(<repository> | <group>)…​]
+git fetch --all [<options>]
+```
+
+##### c) Options
+
+[git fetch](https://git-scm.com/docs/git-fetch#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Download all objects and refs of all branches.
+```bash
+git fetch origin
+```
+
+```bash
+git fetch --all
+```
+
+- Download all objects and refs of a certain branch.
+```bash
+git fetch origin <NAME_OF_BRANCH>
+```
+
+---
+
+#### 4.4.2 git pull
+
+##### a) Function
+
+- Fetch from and integrate with another repository or a local branch.
+
+![](Images/git%20pull.png) 
+
+##### b) Syntax
+```bash
+git pull [<options>] [<repository> [<refspec>…​]]
+```
+
+##### c) Options
+
+[git pull](https://git-scm.com/docs/git-pull#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Update **`working tree`** and **`local branch`** from **`remote branch`**. ATTENTION: **`working tree`** and **`index`** must be the same!
+```bash
+git pull
+```
+
+---
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -858,11 +938,17 @@ git stash clear
 
 ##### c) Options
 
-[git reset](https://git-scm.com/docs/git-reset#_options)
+[git ???](https://git-scm.com/docs/git-???#_options)
 
 ##### d) Useful commands
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
+
+
+
+
+
+
 
 
 ## Reference
