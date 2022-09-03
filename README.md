@@ -885,11 +885,35 @@ git fetch --all
 git fetch origin <NAME_OF_BRANCH>
 ```
 
+---
 
+#### 4.4.2 git pull
 
+##### a) Function
 
+- Fetch from and integrate with another repository or a local branch.
 
+![](Images/git%20pull.png) 
 
+##### b) Syntax
+```bash
+git pull [<options>] [<repository> [<refspec>…​]]
+```
+
+##### c) Options
+
+[git pull](https://git-scm.com/docs/git-pull#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Update **`working tree`** and **`local branch`** from **`remote branch`**. ATTENTION: **`working tree`** and **`index`** must be the same!
+```bash
+git pull
+```
+
+---
 
 
 
@@ -914,11 +938,17 @@ git fetch origin <NAME_OF_BRANCH>
 
 ##### c) Options
 
-[git reset](https://git-scm.com/docs/git-reset#_options)
+[git ???](https://git-scm.com/docs/git-???#_options)
 
 ##### d) Useful commands
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
+
+
+
+
+
+
 
 
 ## Reference
