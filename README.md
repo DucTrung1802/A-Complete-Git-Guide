@@ -908,7 +908,7 @@ git pull [<options>] [<repository> [<refspec>…​]]
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
-- Update **`working tree`** and **`local branch`** from **`remote branch`**. ATTENTION: **`working tree`** and **`index`** must be the same!
+- Update current **`working tree`** and **`local branch`** from corresponding **`remote branch`**. ATTENTION: **`working tree`** and **`index`** must be the same!
 ```bash
 git pull
 ```
