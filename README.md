@@ -1044,16 +1044,69 @@ git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
 
 ---
 
+### 4.6 Patching
 
+#### 4.6.1 git cherry-pick
 
+##### a) Function
 
+- Apply the changes introduced by some existing commits.
 
+##### b) Syntax
+```bash
+git cherry-pick [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]
+		  [-S[<keyid>]] <commit>…​
+git cherry-pick (--continue | --skip | --abort | --quit)
+```
 
+##### c) Options
 
+[git cherry-pick](https://git-scm.com/docs/git-cherry-pick#_options)
 
+##### d) Useful commands
 
+`<SOMETHING_SOMETHING>` is the content to be filled.
 
+- Append a single commit from branch A to branch main.
+```bash
+git checkout main
+git cherry-pick <HASHED_COMMIT_OF_BRANCH_A>
+```
 
+Example:
+Append commit `f9b494h` of branch A to branch main.
+> git checkout main
+> git cherry-pick f9b494h
+
+- Append multiple, **not continuous** commits from branch A to branch main.
+```bash
+git checkout main
+git cherry-pick <HASHED_COMMIT_OF_BRANCH_A> <ANOTHER_HASHED_COMMIT_OF_BRANCH_A>
+```
+
+- Append multiple, **continuous** commits from branch A to branch main.
+```bash
+git checkout main
+git cherry-pick <START_CHAIN_HASHED_COMMIT_BRANCH_A>^..<END_CHAIN_HASHED_COMMIT_BRANCH_A>
+```
+
+Example:
+Append continuous commits `f9b494h`, `dj2389r`, `3jkfe9s`, `sdu3oi2` of branch A to branch main.
+> git checkout main
+> git cherry-pick f9b494h^..sdu3oi2
+
+- One commit for 2 branches.
+```bash
+# Current in branch X, create a new commit
+git add file_X
+git commit -m " new commit branch X"
+
+# Checkout branch Y and use git cherry-pick
+git checkout branch_Y
+git cherry-pick branch_X
+```
+
+---
 
 #### x.x.x git bla bla
 
