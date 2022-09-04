@@ -1084,6 +1084,11 @@ git checkout main
 git cherry-pick <HASHED_COMMIT_OF_BRANCH_A> <ANOTHER_HASHED_COMMIT_OF_BRANCH_A>
 ```
 
+Example:
+Append continuous commits `9nzx9du`, `46yn0hw`, `1rmbtd1`, `tnps7pn` of branch A to branch main.
+> git checkout main
+> git cherry-pick 9nzx9du 46yn0hw 1rmbtd1 tnps7pn
+
 - Append multiple, **continuous** commits from branch A to branch main.
 ```bash
 git checkout main
@@ -1108,24 +1113,49 @@ git cherry-pick branch_X
 
 ---
 
-#### x.x.x git bla bla
+#### 4.6.2 git rebase
 
 ##### a) Function
 
+- Reapply commits on top of another base tip
+
+![](Images/git%20rebase.png)
 
 ##### b) Syntax
-
+```bash
+git rebase [-i | --interactive] [<options>] [--exec <cmd>]
+	[--onto <newbase> | --keep-base] [<upstream> [<branch>]]
+git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]
+	--root [<branch>]
+git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
+```
 
 ##### c) Options
 
-[git ???](https://git-scm.com/docs/git-???#_options)
+[git rebase](https://git-scm.com/docs/git-rebase#_options)
 
 ##### d) Useful commands
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
+- Rebase branch B on branch A (branch A is base of branch B).
+```bash
+git checkout <BRANCH_B>
+git rebase <BRANCH_A>
+```
 
+- Interactively rebase branch B on branch A (branch A is base of branch B).
+```bash
+git checkout <BRANCH_B>
+git rebase --interactive <BRANCH_A>
+```
+A text editor will be opened along with detail instruction and a list of commits. 
 
+---
+
+### 5. Undo changes in Git
+
+Sometimes you make a mistake and want to go back to a previous version. Here's how to rollback changes.
 
 
 
