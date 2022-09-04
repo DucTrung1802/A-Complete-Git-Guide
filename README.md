@@ -259,66 +259,7 @@ AD  abcd.txt
 
 ---
 
-#### 4.2.3 git diff
-
-##### a) Function
-- Show changes between commits, commit and **`working tree`**, etc
-
-![](Images/git%20diff.png)
-
-##### b) Syntax
-```bash
-git diff [<options>] [<commit>] [--] [<path>…​]
-git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>…​]
-git diff [<options>] [--merge-base] <commit> [<commit>…​] <commit> [--] [<path>…​]
-git diff [<options>] <commit>…​<commit> [--] [<path>…​]
-git diff [<options>] <blob> <blob>
-git diff [<options>] --no-index [--] <path> <path>
-```
-
-##### c) Options
-
-[git diff](https://git-scm.com/docs/git-diff#_options)
-
-##### d) Useful commands
-
-`<SOMETHING_SOMETHING>` is the content to be filled.
-
-- Show differences of EXISTING files between **`working tree`** and **`index`**.
-```bash
-git diff
-```
-
-- Show differences of staged files between **`index`** and last commit of current branch.
-```bash
-git diff --cached
-```
-
-- Show differences of staged files between **`index`**, tracking files (modificated files) in **`working tree`** and last commit of current branch.
-```bash
-git diff head
-```
-
-- Show differences of staged files between **`index`**, modificated files in **`working tree`** and last commit of <BRANCH_NAME> branch.
-```bash
-git diff <BRANCH_NAME>
-```
-
-- Show differences between hashed commit 1 and hashed commit 2.
-```bash
-git diff <HASHED_COMMIT_1> <HASHED_COMMIT_2>
-```
-Example:
-> git diff 981f4e 79c9bf
-
-- Show differences between branch 2 and branch 1.
-```bash
-git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
-```
-
----
-
-#### 4.2.4 git commit
+#### 4.2.3 git commit
 
 ##### a) Function
 
@@ -363,7 +304,7 @@ git commit --amend -m <COMMENT_OF_THIS_COMMIT>
 
 ---
 
-#### 4.2.5 git reset
+#### 4.2.4 git reset
 
 ##### a) Function
 
@@ -421,7 +362,7 @@ git reset --hard <HASHED_COMMIT>
 
 ---
 
-#### 4.2.6 git mv
+#### 4.2.5 git mv
 
 ##### a) Function
 
@@ -632,109 +573,7 @@ git push
 
 ---
 
-#### 4.3.4 git log
-
-##### a) Function
-
-- Show commit logs.
-
-##### b) Syntax
-```bash
-git log [<options>] [<revision-range>] [[--] <path>…​]
-```
-
-##### c) Options
-
-[git log](https://git-scm.com/docs/git-log#_options)
-
-##### d) Useful commands
-
-`<SOMETHING_SOMETHING>` is the content to be filled.
-
-- Show detail commit logs of current branch.
-```bash
-git log
-```
-
-Action with `git log`:
-
-| Key | Description |
-| :---: | ----------- |
-| [ENTER] | Next line |
-| w | Next page |
-| [Spacebar] | Previous page |
-| q | Quit |
-| ?`keyword` | Find all commits containing `keyword` |
-| n | Go to previous search result  |
-| N | Go to next search result |
-
-- Show a specific amount of logs.
-```bash
-git log -<NUMBER_OF_LOG>
-```
-Example:
-```bash
-git log -2
-```
-
-- Show changes of a specific amount of logs in detail.
-```bash
-git log -p -<NUMBER_OF_LOG>
-```
-Example:
-```bash
-git log -p -2
-```
-
-- Show changes of a specific amount of logs in brief.
-```bash
-git log --stat -<NUMBER_OF_LOG>
-```
-Example:
-```bash
-git log --stat -2
-```
-
-- Show logs in a line.
-```bash
-git log --oneline
-```
-Example:
-```bash
-git log --stat --oneline -10
-```
-
-- Filter logs by date
-```bash
-git log --after="<YEAR>-<MONTH>-<DAY>" --before="<YEAR>-<MONTH>-<DAY>"
-```
-Example: Filter logs in 2019.
-```bash
-git log --after="2019-1-1" --before="2019-12-31"
-```
-
-- Filter logs by author
-```bash
-git log --oneline --author="<NAME_OF_AUTHOR>"
-```
-Example:
-```bash
-git log --oneline --author="trungld11"
-```
-
-- Filter logs by merging commits.
-```bash
-git log --merges
-```
-
-- Filter logs by non-merging commits.
-```bash
-git log --no-merges
-```
-
----
-
-#### 4.3.5 git stash
+#### 4.3.4 git stash
 
 ##### a) Function
 
@@ -984,31 +823,339 @@ git push -f <NAME_OF_BRANCH>
 
 --- 
 
+### 4.5 Inspection and Comparison
 
-
-
-
-
-
-
-#### x.x.x git bla bla
+#### 4.5.1 git show
 
 ##### a) Function
 
+- Show various types of objects.
 
 ##### b) Syntax
-
+```bash
+git show [<options>] [<object>…​]
+```
 
 ##### c) Options
 
-[git ???](https://git-scm.com/docs/git-???#_options)
+[git show](https://git-scm.com/docs/git-show#_options)
 
 ##### d) Useful commands
 
 `<SOMETHING_SOMETHING>` is the content to be filled.
 
+- Show detail of current checkout commit.
+```bash
+git show
+```
 
+- Show detail of a specific commit.
+```bash
+git show <HASHED_COMMIT>
+```
 
+Example:
+> git show 99b0f3
+
+- Show customized detail of commit.
+```bash
+git show <HASHED_COMMIT> --pretty=<TYPE_OF_FORMAT>
+```
+
+- Table type of format
+
+| TYPE OF FORMAT |
+| :---: |
+| "oneline" |
+| "short" |
+| "medium" |
+| "full" |
+| "fuller" |
+| "email" |
+
+-  Actions in a **`git show`** command.
+
+| Key | Description |
+| :---: | ----------- |
+| [Up arrow] | Previous line |
+| [Down arrow] | Next line |
+| q | Quit |
+
+--- 
+
+#### 4.5.2 git log
+
+##### a) Function
+
+- Show commit logs.
+
+##### b) Syntax
+```bash
+git log [<options>] [<revision-range>] [[--] <path>…​]
+```
+
+##### c) Options
+
+[git log](https://git-scm.com/docs/git-log#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Show detail commit logs of current branch.
+```bash
+git log
+```
+
+Action with `git log`:
+
+| Key | Description |
+| :---: | ----------- |
+| [ENTER] | Next line |
+| w | Next page |
+| [Spacebar] | Previous page |
+| q | Quit |
+| ?`keyword` | Find all commits containing `keyword` |
+| n | Go to previous search result  |
+| N | Go to next search result |
+
+- Show a specific amount of logs.
+```bash
+git log -<NUMBER_OF_LOG>
+```
+Example:
+```bash
+git log -2
+```
+
+- Show changes of a specific amount of logs in detail.
+```bash
+git log -p -<NUMBER_OF_LOG>
+```
+Example:
+```bash
+git log -p -2
+```
+
+- Show changes of a specific amount of logs in brief.
+```bash
+git log --stat -<NUMBER_OF_LOG>
+```
+Example:
+```bash
+git log --stat -2
+```
+
+- Show logs in a line.
+```bash
+git log --oneline
+```
+Example:
+```bash
+git log --stat --oneline -10
+```
+
+- Filter logs by date
+```bash
+git log --after="<YEAR>-<MONTH>-<DAY>" --before="<YEAR>-<MONTH>-<DAY>"
+```
+Example: Filter logs in 2019.
+```bash
+git log --after="2019-1-1" --before="2019-12-31"
+```
+
+- Filter logs by author
+```bash
+git log --oneline --author="<NAME_OF_AUTHOR>"
+```
+Example:
+```bash
+git log --oneline --author="trungld11"
+```
+
+- Filter logs by merging commits.
+```bash
+git log --merges
+```
+
+- Filter logs by non-merging commits.
+```bash
+git log --no-merges
+```
+
+---
+
+#### 4.5.3 git diff
+
+##### a) Function
+- Show changes between commits, commit and **`working tree`**, etc
+
+![](Images/git%20diff.png)
+
+##### b) Syntax
+```bash
+git diff [<options>] [<commit>] [--] [<path>…​]
+git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>…​]
+git diff [<options>] [--merge-base] <commit> [<commit>…​] <commit> [--] [<path>…​]
+git diff [<options>] <commit>…​<commit> [--] [<path>…​]
+git diff [<options>] <blob> <blob>
+git diff [<options>] --no-index [--] <path> <path>
+```
+
+##### c) Options
+
+[git diff](https://git-scm.com/docs/git-diff#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Show differences of EXISTING files between **`working tree`** and **`index`**.
+```bash
+git diff
+```
+
+- Show differences of staged files between **`index`** and last commit of current branch.
+```bash
+git diff --cached
+```
+
+- Show differences of staged files between **`index`**, tracking files (modificated files) in **`working tree`** and last commit of current branch.
+```bash
+git diff head
+```
+
+- Show differences of staged files between **`index`**, modificated files in **`working tree`** and last commit of <BRANCH_NAME> branch.
+```bash
+git diff <BRANCH_NAME>
+```
+
+- Show differences between hashed commit 1 and hashed commit 2.
+```bash
+git diff <HASHED_COMMIT_1> <HASHED_COMMIT_2>
+```
+Example:
+> git diff 981f4e 79c9bf
+
+- Show differences between branch 2 and branch 1.
+```bash
+git diff <BRANCH_1_NAME> <BRANCH_2_NAME>
+```
+
+---
+
+### 4.6 Patching
+
+#### 4.6.1 git cherry-pick
+
+##### a) Function
+
+- Apply the changes introduced by some existing commits.
+
+##### b) Syntax
+```bash
+git cherry-pick [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]
+		  [-S[<keyid>]] <commit>…​
+git cherry-pick (--continue | --skip | --abort | --quit)
+```
+
+##### c) Options
+
+[git cherry-pick](https://git-scm.com/docs/git-cherry-pick#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Append a single commit from branch A to branch main.
+```bash
+git checkout main
+git cherry-pick <HASHED_COMMIT_OF_BRANCH_A>
+```
+
+Example:
+Append commit `f9b494h` of branch A to branch main.
+> git checkout main
+> git cherry-pick f9b494h
+
+- Append multiple, **not continuous** commits from branch A to branch main.
+```bash
+git checkout main
+git cherry-pick <HASHED_COMMIT_OF_BRANCH_A> <ANOTHER_HASHED_COMMIT_OF_BRANCH_A>
+```
+
+Example:
+Append continuous commits `9nzx9du`, `46yn0hw`, `1rmbtd1`, `tnps7pn` of branch A to branch main.
+> git checkout main
+> git cherry-pick 9nzx9du 46yn0hw 1rmbtd1 tnps7pn
+
+- Append multiple, **continuous** commits from branch A to branch main.
+```bash
+git checkout main
+git cherry-pick <START_CHAIN_HASHED_COMMIT_BRANCH_A>^..<END_CHAIN_HASHED_COMMIT_BRANCH_A>
+```
+
+Example:
+Append continuous commits `f9b494h`, `dj2389r`, `3jkfe9s`, `sdu3oi2` of branch A to branch main.
+> git checkout main
+> git cherry-pick f9b494h^..sdu3oi2
+
+- One commit for 2 branches.
+```bash
+# Current in branch X, create a new commit
+git add file_X
+git commit -m " new commit branch X"
+
+# Checkout branch Y and use git cherry-pick
+git checkout branch_Y
+git cherry-pick branch_X
+```
+
+---
+
+#### 4.6.2 git rebase
+
+##### a) Function
+
+- Reapply commits on top of another base tip
+
+![](Images/git%20rebase.png)
+
+##### b) Syntax
+```bash
+git rebase [-i | --interactive] [<options>] [--exec <cmd>]
+	[--onto <newbase> | --keep-base] [<upstream> [<branch>]]
+git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]
+	--root [<branch>]
+git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
+```
+
+##### c) Options
+
+[git rebase](https://git-scm.com/docs/git-rebase#_options)
+
+##### d) Useful commands
+
+`<SOMETHING_SOMETHING>` is the content to be filled.
+
+- Rebase branch B on branch A (branch A is base of branch B).
+```bash
+git checkout <BRANCH_B>
+git rebase <BRANCH_A>
+```
+
+- Interactively rebase branch B on branch A (branch A is base of branch B).
+```bash
+git checkout <BRANCH_B>
+git rebase --interactive <BRANCH_A>
+```
+A text editor will be opened along with detail instruction and a list of commits. 
+
+---
+
+### 5. Undo changes in Git
+
+Sometimes you make a mistake and want to go back to a previous version. Here's how to rollback changes.
 
 
 
