@@ -1157,6 +1157,14 @@ A text editor will be opened along with detail instruction and a list of commits
 
 Sometimes you make a mistake and want to go back to a previous version. Here's how to rollback changes.
 
+#### 5.1 Undo changes in **`working tree`**
+
+
+
+
+
+
+
 
 
 
