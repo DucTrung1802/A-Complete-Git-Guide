@@ -1,6 +1,9 @@
 # A Complete Git Guide
 
-## Cheat Sheet
+## Link to headers
+
+### [4.1 Getting and Creating Projects](#41-getting-and-creating-projects)
+#### [4.1.1 git init](#411-git-init)
 
 ## 1. What is Git ?
 **`Git`** is a free and open source software for distributed version control: 
