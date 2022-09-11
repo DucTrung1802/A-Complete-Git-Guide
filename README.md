@@ -1,6 +1,43 @@
 # A Complete Git Guide
 
-## Cheat Sheet
+## Link to headers
+
+#### [Getting and Creating Projects](#41-getting-and-creating-projects)
+##### [git init](#411-git-init)
+##### [git clone](#412-git-clone)
+
+#### [Basic Snapshotting](#42-basic-snapshotting)
+##### [git add](#421-git-add)
+##### [git status](#422-git-status)
+##### [git commit](#423-git-commit)
+##### [git reset](#424-git-reset)
+##### [git mv](#425-git-mv)
+
+#### [Branching and Merging](#43-branching-and-merging)
+##### [git branch](#431-git-branch)
+##### [git checkout](#432-git-checkout)
+##### [git merge](#433-git-merge)
+##### [git stash](#434-git-stash)
+
+#### [Sharing and Updating Projects](#44-sharing-and-updating-projects)
+##### [git fetch](#441-git-fetch)
+##### [git pull](#442-git-pull)
+##### [git push](#443-git-push)
+
+#### [Inspection and Comparison](#45-inspection-and-comparison)
+##### [git show](#451-git-show)
+##### [git log](#452-git-log)
+##### [git diff](#453-git-diff)
+
+#### [Patching](#46-patching)
+##### [git cherry-pick](#461-git-cherry-pick)
+##### [git rebase](#462-git-rebase)
+
+#### [Undo changes in Git](#5-undo-changes-in-git)
+##### [Undoing local changes that have not been committed](#51-undoing-local-changes-that-have-not-been-committed)
+##### [Undoing local changes that have been committed (BUT NOT PUSHED)](#52-undoing-local-changes-that-have-been-committed-but-not-pushed)
+##### [Undoing a specific sommit (THAT HAS BEEN PUSHED)](#53-undoing-a-specific-sommit-that-has-been-pushed)
+
 
 ## 1. What is Git ?
 **`Git`** is a free and open source software for distributed version control: 
@@ -36,7 +73,7 @@ Explanation:
 
 ## 4. Git Commands
 
-### 4.1 Getting and Creating Projects
+### 4.1 Getting and Creating Projects 
 
 #### 4.1.1 git init
 
@@ -340,7 +377,7 @@ git reset <FILE_NAME_1> <FILE_NAME_2>
 
 - Reset to a commit and `does not touch the index file or the working tree at all`.
 ```bash
-git reset --soft <HASHED_COMMIT>
+git reset --soft <HASH_COMMIT>
 ```
 Example:
 > git reset --soft bd33c1
@@ -348,16 +385,16 @@ Example:
 
 - Reset to a commit and **`reset the index but not the working tree`**.
 ```bash
-git reset <HASHED_COMMIT>
+git reset <HASH_COMMIT>
 ```
 or
 ```bash
-git reset --mixed <HASHED_COMMIT>
+git reset --mixed <HASH_COMMIT>
 ```
 
 - Reset to a commit and **`reset the index and working tree`**.
 ```bash
-git reset --hard <HASHED_COMMIT>
+git reset --hard <HASH_COMMIT>
 ```
 
 ---
@@ -503,21 +540,21 @@ git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>…​]
 git checkout <EXISTING_BRANCH_NAME>
 ```
 
-- Restore a file in <HASHED_COMMIT>. Changes will be shown in **`index`**.
+- Restore a file in <HASH_COMMIT>. Changes will be shown in **`index`**.
 ```bash
-git checkout <HASHED_COMMIT> <FILE_NAME>
+git checkout <HASH_COMMIT> <FILE_NAME>
 ```
 
 - Checkout a commit.
 
-Show log in simple form to see all <HASHED_COMMIT>.
+Show log in simple form to see all <HASH_COMMIT>.
 ```bash
 git log --oneline
 ```
 
 Checkout a commit.
 ```bash
-git checkout <HASHED_COMMIT>
+git checkout <HASH_COMMIT>
 ```
 
 Example
@@ -851,7 +888,7 @@ git show
 
 - Show detail of a specific commit.
 ```bash
-git show <HASHED_COMMIT>
+git show <HASH_COMMIT>
 ```
 
 Example:
@@ -859,7 +896,7 @@ Example:
 
 - Show customized detail of commit.
 ```bash
-git show <HASHED_COMMIT> --pretty=<TYPE_OF_FORMAT>
+git show <HASH_COMMIT> --pretty=<TYPE_OF_FORMAT>
 ```
 
 - Table type of format
@@ -1030,9 +1067,9 @@ git diff head
 git diff <BRANCH_NAME>
 ```
 
-- Show differences between hashed commit 1 and hashed commit 2.
+- Show differences between HASH commit 1 and HASH commit 2.
 ```bash
-git diff <HASHED_COMMIT_1> <HASHED_COMMIT_2>
+git diff <HASH_COMMIT_1> <HASH_COMMIT_2>
 ```
 Example:
 > git diff 981f4e 79c9bf
@@ -1070,7 +1107,7 @@ git cherry-pick (--continue | --skip | --abort | --quit)
 - Append a single commit from branch A to branch main.
 ```bash
 git checkout main
-git cherry-pick <HASHED_COMMIT_OF_BRANCH_A>
+git cherry-pick <HASH_COMMIT_OF_BRANCH_A>
 ```
 
 Example:
@@ -1081,7 +1118,7 @@ Append commit `f9b494h` of branch A to branch main.
 - Append multiple, **not continuous** commits from branch A to branch main.
 ```bash
 git checkout main
-git cherry-pick <HASHED_COMMIT_OF_BRANCH_A> <ANOTHER_HASHED_COMMIT_OF_BRANCH_A>
+git cherry-pick <HASH_COMMIT_OF_BRANCH_A> <ANOTHER_HASH_COMMIT_OF_BRANCH_A>
 ```
 
 Example:
@@ -1092,7 +1129,7 @@ Append continuous commits `9nzx9du`, `46yn0hw`, `1rmbtd1`, `tnps7pn` of branch A
 - Append multiple, **continuous** commits from branch A to branch main.
 ```bash
 git checkout main
-git cherry-pick <START_CHAIN_HASHED_COMMIT_BRANCH_A>^..<END_CHAIN_HASHED_COMMIT_BRANCH_A>
+git cherry-pick <START_CHAIN_HASH_COMMIT_BRANCH_A>^..<END_CHAIN_HASH_COMMIT_BRANCH_A>
 ```
 
 Example:
@@ -1158,8 +1195,89 @@ A text editor will be opened along with detail instruction and a list of commits
 Sometimes you make a mistake and want to go back to a previous version. Here's how to rollback changes.
 
 
+#### 5.1 Undoing local changes that have not been committed
+
+- Check status.
+```bash
+git status
+```
+
+- Undo change for specific `modified` and `deleted` files.
+```bash
+git restore <FILE_A> <FILE_B> 
+```
+
+- Undo change for all `modified` and `deleted` files.
+```bash
+git restore .
+```
+
+- Undo change for `completely new` (untracked) files.
+```bash
+git clean -f <FILE_A> <FILE_B>
+```
+
+- Undo change all `completely new` (untracked) files.
+```bash
+git clean -f .
+```
+
+#### 5.2 Undoing local changes that have been committed (BUT NOT PUSHED)
+
+- Check status.
+```bash
+git status
+```
+
+- Check hash commits.
+```bash
+git log --oneline
+```
+
+Each commit has a unique hash (which looks something like `2f5451f`). You need to find the hash for the last good commit (the one you want to revert back to).
 
 
+- Revert to a commit and `does not touch the index file or the working tree at all` (replacing `2f5451f` with your commit's hash).
+```bash
+git reset --soft 2f5451f
+```
+
+
+- Revert to a commit and **`reset the index but not the working tree`** (replacing `2f5451f` with your commit's hash).
+```bash
+git reset 2f5451f
+```
+or
+```bash
+git reset --mixed 2f5451f
+```
+
+- Revert to a commit and **`reset the index and working tree`** (replacing `2f5451f` with your commit's hash).
+```bash
+git reset --hard 2f5451f
+```
+
+#### 5.3 Undoing a specific sommit (THAT HAS BEEN PUSHED)
+
+- Check status.
+```bash
+git status
+```
+
+- Check hash commits.
+```bash
+git log --oneline
+```
+
+- Revert with default comment (Revert <old_comment>) (replacing `2f5451f` with your commit's hash)
+```bash
+git revert 2f5451f --no-edit
+```
+
+- Revert with editing comment (replacing `2f5451f` with your commit's hash)
+```bash
+git revert 2f5451f
+```
 
 ## Reference
 - https://git-scm.com/docs
