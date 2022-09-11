@@ -2,8 +2,42 @@
 
 ## Link to headers
 
-### [4.1 Getting and Creating Projects](#41-getting-and-creating-projects)
-#### [4.1.1 git init](#411-git-init)
+#### [4.1 Getting and Creating Projects](#41-getting-and-creating-projects)
+##### [4.1.1 git init](#411-git-init)
+##### [4.1.2 git clone](#412-git-clone)
+
+#### [4.2 Basic Snapshotting](#42-basic-snapshotting)
+##### [4.2.1 git add](#421-git-add)
+##### [4.2.2 git status](#422-git-status)
+##### [4.2.3 git commit](#423-git-commit)
+##### [4.2.4 git reset](#424-git-reset)
+##### [4.2.5 git mv](#425-git-mv)
+
+#### [4.3 Branching and Merging](#43-branching-and-merging)
+##### [4.3.1 git branch](#431-git-branch)
+##### [4.3.2 git checkout](#432-git-checkout)
+##### [4.3.3 git merge](#433-git-merge)
+##### [4.3.4 git stash](#434-git-stash)
+
+#### [4.4 Sharing and Updating Projects](#44-sharing-and-updating-projects)
+##### [4.4.1 git fetch](#441-git-fetch)
+##### [4.4.2 git pull](#442-git-pull)
+##### [4.4.3 git push](#443-git-push)
+
+#### [4.5 Inspection and Comparison](#45-inspection-and-comparison)
+##### [4.5.1 git show](#451-git-show)
+##### [4.5.2 git log](#452-git-log)
+##### [4.5.3 git diff](#453-git-diff)
+
+#### [4.6 Patching](#46-patching)
+##### [4.6.1 git cherry-pick](#461-git-cherry-pick)
+##### [4.6.2 git rebase](#462-git-rebase)
+
+#### [5. Undo changes in Git](#5-undo-changes-in-git)
+##### [5.1 Undoing local changes that have not been committed](#51-undoing-local-changes-that-have-not-been-committed)
+##### [5.2 Undoing local changes that have been committed (BUT NOT PUSHED)](#52-undoing-local-changes-that-have-been-committed-but-not-pushed)
+##### [5.3 Undoing a specific sommit (THAT HAS BEEN PUSHED)](#53-undoing-a-specific-sommit-that-has-been-pushed)
+
 
 ## 1. What is Git ?
 **`Git`** is a free and open source software for distributed version control: 
