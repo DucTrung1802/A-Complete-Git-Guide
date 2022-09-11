@@ -2,9 +2,9 @@
 
 ## Link to headers
 
-#### [4.1 Getting and Creating Projects](#41-getting-and-creating-projects)
-##### [4.1.1 git init](#411-git-init)
-##### [4.1.2 git clone](#412-git-clone)
+#### [Getting and Creating Projects](#41-getting-and-creating-projects)
+##### [git init](#411-git-init)
+##### [git clone](#412-git-clone)
 
 #### [4.2 Basic Snapshotting](#42-basic-snapshotting)
 ##### [4.2.1 git add](#421-git-add)
@@ -73,7 +73,7 @@ Explanation:
 
 ## 4. Git Commands
 
-### 4.1 Getting and Creating Projects
+### 4.1 Getting and Creating Projects 
 
 #### 4.1.1 git init
 
