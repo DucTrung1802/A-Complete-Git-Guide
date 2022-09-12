@@ -1188,6 +1188,37 @@ git rebase --interactive <BRANCH_A>
 ```
 A text editor will be opened along with detail instruction and a list of commits. 
 
+- Squash (combine) commits
+
+For example, we have a git log as the following.
+![](image/../Images/squash%20commits%20example.png)
+
+We want to combine commits `test 11`, `test 12` and `test 13` into `test X`.
+
+First, find the hash of the base commit (`bc1eaa2` in this case).
+
+Second, run (change the hash according your one)
+```bash
+git rebase -i bc1eaa2
+```
+
+An editor pop up.
+![](images/squash%20commit%20editor.png)
+
+From the **`second`** commit, change `pick` to `squash`.
+![](images/squash%20commits%20editor%20change%20type.png)
+
+Another editor pop up to change the message of final commit.
+![](images/squash%20start%20editing%20message.png)
+
+Change message as you want.
+![](images/squash%20edited%20message.png)
+
+Push to apply changes.
+```bash
+git push -f
+```
+
 ---
 
 ### 5. Undo changes in Git
@@ -1285,3 +1316,4 @@ git revert 2f5451f
 - https://backlog.com/git-tutorial/vn/intro/intro1_2.html
 - https://ndpsoftware.com/git-cheatsheet.html#loc=index
 - https://xuanthulab.net/git-va-github/
+- https://manhpt.com/2019/06/15/git-workflow-lam-the-nao-de-squash-commit-tai-local/
